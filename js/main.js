@@ -37,7 +37,7 @@ $(function() {
     var hr;
     var h = $(".head").innerHeight();
     if ($(window).width() < 992) {
-       hr = h + 50
+       hr = h + 30
     }else{
       hr = h;
     }
