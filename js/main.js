@@ -34,8 +34,15 @@ $(function() {
   // Scrolls
   $(".navbar .links a , .res li a").on("click", function(e) {
     e.preventDefault();
+    var hr;
+    var h = $(".head").innerHeight();
+    if ($(window).width() < 992) {
+       hr = h + 50
+    }else{
+      hr = h;
+    }
     $("html, body").animate({
-      scrollTop: $( "#" + $(this).attr("data-sec")).offset().top - $(".head").innerHeight()
+      scrollTop: $( "#" + $(this).attr("data-sec")).offset().top - hr
     }, 1000)
   });
 
